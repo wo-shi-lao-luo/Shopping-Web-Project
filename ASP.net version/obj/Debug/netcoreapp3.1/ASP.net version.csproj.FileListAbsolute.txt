@@ -1,0 +1,37 @@
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.AssemblyInfoInputs.cache
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.AssemblyInfo.cs
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.csproj.CoreCompileInputs.cache
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.MvcApplicationPartsAssemblyInfo.cache
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.RazorAssemblyInfo.cache
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.RazorAssemblyInfo.cs
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.TagHelpers.input.cache
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.TagHelpers.output.cache
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.RazorCoreGenerate.cache
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\Razor\Pages\Index.cshtml.g.cs
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\Razor\Pages\Privacy.cshtml.g.cs
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_Layout.cshtml.g.cs
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.RazorTargetAssemblyInfo.cache
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.RazorTargetAssemblyInfo.cs
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.dll
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.pdb
+C:\Github\Shopping-Web-Project\ASP.net version\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Github\Shopping-Web-Project\ASP.net version\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Github\Shopping-Web-Project\ASP.net version\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Github\Shopping-Web-Project\ASP.net version\bin\Debug\netcoreapp3.1\ASP.net version.exe
+C:\Github\Shopping-Web-Project\ASP.net version\bin\Debug\netcoreapp3.1\ASP.net version.deps.json
+C:\Github\Shopping-Web-Project\ASP.net version\bin\Debug\netcoreapp3.1\ASP.net version.runtimeconfig.json
+C:\Github\Shopping-Web-Project\ASP.net version\bin\Debug\netcoreapp3.1\ASP.net version.runtimeconfig.dev.json
+C:\Github\Shopping-Web-Project\ASP.net version\bin\Debug\netcoreapp3.1\ASP.net version.dll
+C:\Github\Shopping-Web-Project\ASP.net version\bin\Debug\netcoreapp3.1\ASP.net version.pdb
+C:\Github\Shopping-Web-Project\ASP.net version\bin\Debug\netcoreapp3.1\ASP.net version.Views.dll
+C:\Github\Shopping-Web-Project\ASP.net version\bin\Debug\netcoreapp3.1\ASP.net version.Views.pdb
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.Views.pdb
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\staticwebassets\ASP.net version.StaticWebAssets.Manifest.cache
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\staticwebassets\ASP.net version.StaticWebAssets.xml
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.genruntimeconfig.cache
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.csproj.CopyComplete
+C:\Github\Shopping-Web-Project\ASP.net version\obj\Debug\netcoreapp3.1\ASP.net version.csprojAssemblyReference.cache
