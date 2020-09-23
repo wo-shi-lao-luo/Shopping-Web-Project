@@ -1,0 +1,25 @@
+.card {
+    background-color: #0D0D0D;
+}
+
+.card img {
+	transition: transform 1s;
+}
+
+.card img:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}
+
+.card h5 {
+	text-align: center;
+	color: #F2F2F2;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 500;
+}
+
+.card p {
+	color: #F2F2F2;
+	text-align: center;
+	font-family: Didot, serif;
+}

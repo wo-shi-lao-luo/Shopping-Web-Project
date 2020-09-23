@@ -1,0 +1,110 @@
+:root {
+	--color-offwhite: #0D0D0D;
+}
+body {
+	background-color: var(--color-offwhite);
+}
+
+/* HERO IMAGE */
+.heroImage {
+	width: 100%;
+	background-image: url("../../assets/img/cake.jpg");
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+/* HEADER */
+.freeShip {
+	text-align: center;
+	background-color: #F2F2F2;
+	padding: 10px 0;
+}
+
+.freeShip h3 {
+	font-family: 'Oxygen', sans-serif;
+	margin: 0 auto;
+	font-size: 0.9em;
+
+}
+
+/* TITLE */
+.title {
+	text-align: center;
+	margin-top: 5%;
+	margin-bottom: 3%;
+}
+
+.title h1 {
+	font-family: 'Italiana', serif;
+	color: #ffffff;
+	font-size: 4em;
+	font-weight: bolder;
+}
+
+/* ABSTRACT */
+.container {
+	max-width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.abstract {
+	margin-top: 5%;
+}
+
+.abstract h2 {
+	color: white;
+	font-family: Didot, serif;
+	font-weight: lighter;
+	font-size: 2em;	
+	text-align: center;
+}
+
+.abstract p {
+	color: white;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 200;
+	line-height: 150%;
+}
+
+
+/* BUTTON */
+.abstract button {
+	margin: 10% auto;
+	width: 50%;
+	height: 6vh;
+	text-align: center;
+	font-weight: 700;
+}
+
+.abstract button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.abstract button span:after {
+	content: '\00bb';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.abstract button:hover span {
+	padding-right: 25px;
+}
+
+.abstract button:hover span:after {
+	opacity: 1;
+	right: 0;
+}
+
+.abstract button:focus {
+	background-color: white;
+	color: #0D0D0D;
+}
