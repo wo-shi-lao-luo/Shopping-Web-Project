@@ -1,16 +1,18 @@
 import * as React from 'react';
-import { Route } from 'react-router';
-import Layout from './components/Layout';
-import Home from './components/Home';
-import Counter from './components/Counter';
-import FetchData from './components/FetchData';
+import { Switch, Route } from 'react-router';
 
-import './custom.css'
+import HeroImage from './components/HeroImage/HeroImage';
+import ProductList from "./components/ProductList/ProductList";
+import DetailPage from "./components/DetailPage/DetailPage";
+import Cart from "./components/Cart/Cart";
 
 export default () => (
-    <Layout>
-        <Route exact path='/' component={Home} />
-        <Route path='/counter' component={Counter} />
-        <Route path='/fetch-data/:startDateIndex?' component={FetchData} />
-    </Layout>
+    <React.Fragment>
+        <Switch>
+            <Route exact path="/" component={HeroImage} />
+            <Route path="/productlist" component={ProductList} />
+            <Route path="/details" component={DetailPage} />
+            <Route path="/cart" component={Cart} />
+        </Switch>
+    </React.Fragment>
 );
