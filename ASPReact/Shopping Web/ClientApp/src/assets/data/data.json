@@ -1,0 +1,74 @@
+[
+    {
+        "productId": "1",
+        "productName": "item1",
+        "productPrice": 40.00,
+        "productTitle": "title1",
+        "productImage": "img/1.jpg",
+        "ProductUrl": null,
+        "productDescription": "description1"
+    },
+    {
+        "productId": "2",
+        "productName": "item2",
+        "productPrice": 50.00,
+        "productTitle": "title2",
+        "productImage": "img/2.jpg",
+        "ProductUrl": null,
+        "productDescription": "description2"
+    },
+    {
+        "productId": "3",
+        "productName": "item3",
+        "productPrice": 50.00,
+        "productTitle": "title2",
+        "productImage": "img/2.jpg",
+        "ProductUrl": null,
+        "productDescription": "description2"
+    },
+    {
+        "productId": "4",
+        "productName": "item4",
+        "productPrice": 50.00,
+        "productTitle": "title2",
+        "productImage": "img/2.jpg",
+        "ProductUrl": null,
+        "productDescription": "description2"
+    },
+    {
+        "productId": "5",
+        "productName": "item5",
+        "productPrice": 50.00,
+        "productTitle": "title2",
+        "productImage": "img/2.jpg",
+        "ProductUrl": null,
+        "productDescription": "description2"
+    },
+    {
+        "productId": "6",
+        "productName": "item6",
+        "productPrice": 50.00,
+        "productTitle": "title2",
+        "productImage": "img/2.jpg",
+        "ProductUrl": null,
+        "productDescription": "description2"
+    },
+    {
+        "productId": "7",
+        "productName": "item7",
+        "productPrice": 50.00,
+        "productTitle": "title2",
+        "productImage": "img/2.jpg",
+        "ProductUrl": null,
+        "productDescription": "description2"
+    },
+    {
+        "productId": "8",
+        "productName": "item8",
+        "productPrice": 50.00,
+        "productTitle": "title2",
+        "productImage": "img/2.jpg",
+        "ProductUrl": null,
+        "productDescription": "description2"
+    }
+]
