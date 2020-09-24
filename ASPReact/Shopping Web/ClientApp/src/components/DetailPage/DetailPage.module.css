@@ -1,3 +1,35 @@
+.outter {
+    max-height: 100vh;
+}
+
 .content {
     margin-top: 10%;
+}
+
+.info {
+    margin-top: 5%;
+}
+
+.title {
+    color: white;
+    font-family: 'Didot', serif;
+    font-weight: 300;
+    text-align: center;
+}
+
+.description {
+    margin-top: 3vh;
+    color: white;
+    font-size: 1em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 200;
+    line-height: 150%;
+}
+
+.price {
+    margin: 3vh auto;
+    font-family: Didot, serif;
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
 }
