@@ -3,8 +3,8 @@ import React from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import classes from './HeroImage.module.css';
 
-import Navbar from '../Navbar/Navbar';
-import Button from '../Button/Button';
+import Navbar from '../../components/Navbar/Navbar';
+import Button from '../../components/Button/Button';
 
 const heroImage = () => {
     return (

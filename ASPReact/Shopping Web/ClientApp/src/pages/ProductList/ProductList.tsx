@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import classes from './ProductList.module.css';
 
-import data from '../../assets/data/data';
-import Navbar from '../Navbar/Navbar';
-import Button from '../Button/Button';
-import Card from '../Card/Card';
+import data from '../../assets/data/data.json';
+import Navbar from '../../components/Navbar/Navbar';
+import Button from '../../components/Button/Button';
+import Card from '../../components/Card/Card';
 
 class ProductList extends Component {
     state = { products: data};
@@ -19,8 +19,7 @@ class ProductList extends Component {
             );
         });
 
-        return (           
-
+        return (
             <div>
                 <div className={classes.sticky}>
                     <Navbar />
