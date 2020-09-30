@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Switch, Route } from 'react-router';
 
-import HeroImage from './components/HeroImage/HeroImage';
-import ProductList from "./components/ProductList/ProductList";
-import DetailPage from "./components/DetailPage/DetailPage";
-import Cart from "./components/Cart/Cart";
+import HeroImage from './pages/HeroImage/HeroImage';
+import ProductList from "./pages/ProductList/ProductList";
+import DetailPage from "./pages/DetailPage/DetailPage";
+import Cart from './pages/Cart/Cart';
 
 export default () => (
     <React.Fragment>

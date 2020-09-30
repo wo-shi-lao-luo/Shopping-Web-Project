@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{1F58C1C5-1749-4326-BAC9-3E80F6E85FE5}|Default">
+  <MonoDevelop.Ide.ItemProperties.ASP.net_220version PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Product.cs">
+    <Files>
+      <File FileName="Models/Product.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ASP.net version" expanded="True">
+            <Node name="ASP.net version" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
