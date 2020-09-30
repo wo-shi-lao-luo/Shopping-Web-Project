@@ -1,3 +1,4 @@
+using ASP.net_version.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -20,7 +21,7 @@ namespace Shopping_Web
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {               
             services.AddControllersWithViews();
 
             // In production, the React files will be served from this directory
@@ -28,6 +29,7 @@ namespace Shopping_Web
             {
                 configuration.RootPath = "ClientApp/build";
             });
+            services.AddTransient<JsonFileProductService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +58,7 @@ namespace Shopping_Web
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
             });
+
 
             app.UseSpa(spa =>
             {

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import classes from './ProductList.module.css';
@@ -10,6 +11,16 @@ import Card from '../Card/Card';
 
 class ProductList extends Component {
     state = { products: data};
+    //state = { products: [] }
+
+    //componentDidMount() {
+    //    axios.get("http://localhost:51260/api/products").then((response: { data: any; }) => {
+    //        //console.log(response.data);  
+    //        this.setState({
+    //            products: response.data
+    //        });
+    //    });
+    //} 
 
     render() {
 
