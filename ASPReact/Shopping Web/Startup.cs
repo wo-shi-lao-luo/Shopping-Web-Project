@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Shopping_Web.DbContexts;
 
 namespace Shopping_Web
 {
@@ -23,6 +25,8 @@ namespace Shopping_Web
         public void ConfigureServices(IServiceCollection services)
         {               
             services.AddControllersWithViews();
+            services.AddDbContext<ShoppingContext>(options =>
+                options.UseSqlite(Configuration.GetConnectionString("shopping_web_db")));
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

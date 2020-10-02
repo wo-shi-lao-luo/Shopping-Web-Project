@@ -1,0 +1,10 @@
+CREATE TABLE "Products" (
+	"ID"	INTEGER NOT NULL UNIQUE,
+	"Name"	TEXT NOT NULL,
+	"Price"	NUMERIC NOT NULL,
+	"Title"	TEXT,
+	"Image"	TEXT,
+	"URL"	TEXT,
+	"Description"	TEXT,
+	PRIMARY KEY("ID" AUTOINCREMENT)
+);
