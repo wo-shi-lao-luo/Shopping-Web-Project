@@ -30,9 +30,5 @@ namespace ASP.net_version.Models
         //[JsonPropertyName("productDescription")]
         public string Description { get; set; }
 
-        //public override string ToString()
-        //{
-        //    return JsonSerializer.Serialize<Product>(this);
-        //}
     }
 }

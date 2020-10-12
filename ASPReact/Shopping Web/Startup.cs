@@ -26,8 +26,6 @@ namespace Shopping_Web
         public void ConfigureServices(IServiceCollection services)
         {               
             services.AddControllersWithViews();
-            //services.AddDbContext<ShoppingContext>(options =>
-            //    options.UseSqlite(Configuration.GetConnectionString("shopping_web_db")));
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
