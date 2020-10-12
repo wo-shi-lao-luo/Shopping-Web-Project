@@ -4,9 +4,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Shopping_Web.DbContexts;
+using Shopping_Web.Services;
 
 namespace Shopping_Web
 {
@@ -30,6 +33,7 @@ namespace Shopping_Web
                 configuration.RootPath = "ClientApp/build";
             });
             services.AddTransient<JsonFileProductService>();
+            services.AddTransient<DbProductService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
