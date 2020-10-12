@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Shopping_Web.DbContexts;
+using Shopping_Web.Services;
 
 namespace Shopping_Web
 {
@@ -25,8 +26,8 @@ namespace Shopping_Web
         public void ConfigureServices(IServiceCollection services)
         {               
             services.AddControllersWithViews();
-            services.AddDbContext<ShoppingContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("shopping_web_db")));
+            //services.AddDbContext<ShoppingContext>(options =>
+            //    options.UseSqlite(Configuration.GetConnectionString("shopping_web_db")));
 
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -34,6 +35,7 @@ namespace Shopping_Web
                 configuration.RootPath = "ClientApp/build";
             });
             services.AddTransient<JsonFileProductService>();
+            services.AddTransient<DbProductService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

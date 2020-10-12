@@ -9,30 +9,30 @@ namespace ASP.net_version.Models
 {
     public class Product
     {
-        [JsonPropertyName("productId")]
-        public string Id { get; set; }
+        //[JsonPropertyName("productId")]
+        public int Id { get; set; }
 
-        [JsonPropertyName("productName")]
+        //[JsonPropertyName("productName")]
         public string Name { get; set; }
 
-        [JsonPropertyName("productPrice")]
+        //[JsonPropertyName("productPrice")]
         public float Price { get; set; }
 
-        [JsonPropertyName("productTitle")]
+        //[JsonPropertyName("productTitle")]
         public string Title { get; set; }
 
-        [JsonPropertyName("productImage")]
+        //[JsonPropertyName("productImage")]
         public string Image { get; set; }
 
-        [JsonPropertyName("productUrl")]
+        //[JsonPropertyName("productUrl")]
         public string URL { get; set; }
 
-        [JsonPropertyName("productDescription")]
+        //[JsonPropertyName("productDescription")]
         public string Description { get; set; }
 
-        public override string ToString()
-        {
-            return JsonSerializer.Serialize<Product>(this);
-        }
+        //public override string ToString()
+        //{
+        //    return JsonSerializer.Serialize<Product>(this);
+        //}
     }
 }
