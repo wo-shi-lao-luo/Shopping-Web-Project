@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using ASP.net_version.Models;
 using ASP.net_version.Services;
@@ -10,14 +11,15 @@ using Shopping_Web.Services;
 
 namespace Shopping_Web.Controllers
 {
-    public class HomeController : Controller
+    public class ProductController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        public DbProductService ProductService;
+        private readonly ILogger<ProductController> _logger;
+        public ProductService ProductService;
         public List<Product> Products { get; set; }
 
 
-        public HomeController(ILogger<HomeController> logger, DbProductService productService)
+
+        public ProductController(ILogger<ProductController> logger, ProductService productService)
         {
             _logger = logger;
             ProductService = productService;
@@ -28,6 +30,14 @@ namespace Shopping_Web.Controllers
         {
             Products = ProductService.GetProducts();
             return Products;
+        }
+
+
+        [HttpGet("api/products/{id}")]
+        public Product GetProductById(int id)
+        {
+            var product = ProductService.GetProductById(id);
+            return product;
         }
     }
 }

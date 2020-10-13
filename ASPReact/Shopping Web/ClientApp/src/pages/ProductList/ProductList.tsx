@@ -10,17 +10,27 @@ import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
 
 class ProductList extends Component {
-    state = { products: data};
-    //state = { products: [] }
+    //state = { products: data};
+    state = { products: [] }
 
+    componentDidMount() {
+        axios.get("https://localhost:44344/api/products").then((response: { data: any; }) => {
+            console.log("Product List:");
+            console.log(response.data);  
+            this.setState({
+                products: response.data
+            });
+        });
+    } 
     //componentDidMount() {
-    //    axios.get("http://localhost:51260/api/products").then((response: { data: any; }) => {
-    //        //console.log(response.data);  
-    //        this.setState({
-    //            products: response.data
+    //    fetch('https://localhost:44344/api/products')
+    //        .then((response) => response.json())
+    //        .then(productsList => {
+    //            this.setState({ products: productsList });
+    //            console.log("Product List");
+    //            console.log(productsList);
     //        });
-    //    });
-    //} 
+    //}
 
     render() {
 

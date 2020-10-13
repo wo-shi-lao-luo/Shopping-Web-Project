@@ -33,7 +33,7 @@ namespace Shopping_Web
                 configuration.RootPath = "ClientApp/build";
             });
             services.AddTransient<JsonFileProductService>();
-            services.AddTransient<DbProductService>();
+            services.AddTransient<ProductService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
