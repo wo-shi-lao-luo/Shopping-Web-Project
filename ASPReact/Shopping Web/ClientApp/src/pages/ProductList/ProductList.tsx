@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+import React, { Component } from 'react';
+import axios from 'axios';
+>>>>>>> master
 
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import classes from './ProductList.module.css';
@@ -8,7 +13,32 @@ import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
 
+<<<<<<< HEAD
 function productList () {
+=======
+class ProductList extends Component {
+    //state = { products: data};
+    state = { products: [] }
+
+    componentDidMount() {
+        axios.get("https://localhost:44344/api/products").then((response: { data: any; }) => {
+            console.log("Product List:");
+            console.log(response.data);  
+            this.setState({
+                products: response.data
+            });
+        });
+    } 
+    //componentDidMount() {
+    //    fetch('https://localhost:44344/api/products')
+    //        .then((response) => response.json())
+    //        .then(productsList => {
+    //            this.setState({ products: productsList });
+    //            console.log("Product List");
+    //            console.log(productsList);
+    //        });
+    //}
+>>>>>>> master
 
     //const [products, setProducts] = useState(data);
 

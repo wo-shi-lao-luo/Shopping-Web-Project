@@ -20,7 +20,7 @@ namespace ASP.net_version.Services
 
         private string JsonFileName
         {
-            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "products.json"); }
+            get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "data.json"); }
         }
 
         public IEnumerable<Product> GetProducts()
