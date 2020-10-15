@@ -9,7 +9,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
 
-function productList() {
+function productList () {
     //state = { products: data};
    //  state = { products: [] }
     //const [products, setProducts] = useState("prodcuts");
@@ -35,35 +35,36 @@ function productList() {
     //}
 
 
-        //let products = this.state.products.map(product => {
-        //    return (
-        //        <Card product={product}/>
-        //    );
-        //});
+    //let products = this.state.products.map(product => {
+    //    return (
+    //        <Card product={product} />
+    //    );
+    //});
 
-        return (
-            <div>
-                <div className={classes.sticky}>
-                    <Navbar />
-                </div>
+    return (
+        <div>
+            <div className={classes.sticky}>
+                <Navbar />
+            </div>
     
-                <div className={classes.container}>
-                    <h1 className={classes.order}>Order</h1>
-    
-                    <div className="row">
-                        <div className={`col-sm-3 ${classes.dropDownMenu}`}>
-                            <Button btnType="dropdown-item">PICK-UP</Button>
-                            <Button btnType="dropdown-item">DELIVERY</Button>
-                            <Button btnType="dropdown">CURBSIDE PICK-UP</Button>
-                        </div>
-    
-                        <div className="col-sm-9 d-flex flex-wrap justify-content-center">  
-                            {/* {products} */}
-                        </div>
+            <div className={classes.container}>
+                <h1 className={classes.order}>Order</h1>
+   
+                <div className="row">
+                    <div className={`col-sm-3 ${classes.dropDownMenu}`}>
+                        <Button btnType="dropdown-item">PICK-UP</Button>
+                        <Button btnType="dropdown-item">DELIVERY</Button>
+                        <Button btnType="dropdown">CURBSIDE PICK-UP</Button>
                     </div>
+    
+                    <div className="col-sm-9 d-flex flex-wrap justify-content-center">  
+                        {/*{products} */}
+                    </div> 
                 </div>
             </div>
-        )
+        </div>
+    )
+
 };
 
 export default productList;
