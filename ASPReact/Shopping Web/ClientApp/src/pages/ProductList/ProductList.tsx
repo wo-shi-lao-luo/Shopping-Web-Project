@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -9,19 +9,21 @@ import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
 
-class ProductList extends Component {
+function productList() {
     //state = { products: data};
-    state = { products: [] }
+   //  state = { products: [] }
+    //const [products, setProducts] = useState("prodcuts");
 
-    componentDidMount() {
-        axios.get("https://localhost:44344/api/products").then((response: { data: any; }) => {
-            console.log("Product List:");
-            console.log(response.data);  
-            this.setState({
-                products: response.data
-            });
-        });
-    } 
+    //componentDidMount() {
+    //    axios.get("https://localhost:44344/api/products").then((response: { data: any; }) => {
+    //        console.log("Product List:");
+    //        console.log(response.data);  
+    //        this.setState({
+    //            products: response.data
+    //        });
+    //    });
+    //}
+
     //componentDidMount() {
     //    fetch('https://localhost:44344/api/products')
     //        .then((response) => response.json())
@@ -32,13 +34,12 @@ class ProductList extends Component {
     //        });
     //}
 
-    render() {
 
-        let products = this.state.products.map(product => {
-            return (
-                <Card product={product}/>
-            );
-        });
+        //let products = this.state.products.map(product => {
+        //    return (
+        //        <Card product={product}/>
+        //    );
+        //});
 
         return (
             <div>
@@ -57,13 +58,12 @@ class ProductList extends Component {
                         </div>
     
                         <div className="col-sm-9 d-flex flex-wrap justify-content-center">  
-                            {products}
+                            {/* {products} */}
                         </div>
                     </div>
                 </div>
             </div>
         )
-    };
 };
 
-export default ProductList;
+export default productList;
