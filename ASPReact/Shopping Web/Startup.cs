@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Shopping_Web.DbContexts;
 using Shopping_Web.Services;
 
@@ -32,8 +33,7 @@ namespace Shopping_Web
             {
                 configuration.RootPath = "ClientApp/build";
             });
-            services.AddTransient<JsonFileProductService>();
-            services.AddTransient<ProductService>();
+            services.AddDbContext<ShoppingContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
