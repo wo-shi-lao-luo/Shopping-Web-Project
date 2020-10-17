@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 using ASP.net_version.Models;
 using ASP.net_version.Services;
 <<<<<<< HEAD
-<<<<<<< HEAD
 using Microsoft.AspNetCore.Cors;
-=======
->>>>>>> parent of da49594b... Merge pull request #13 from wo-shi-lao-luo/kyle-branch
 =======
 >>>>>>> parent of da49594b... Merge pull request #13 from wo-shi-lao-luo/kyle-branch
 using Microsoft.AspNetCore.Mvc;
@@ -34,10 +31,7 @@ namespace Shopping_Web.Controllers
 
         [HttpGet("api/products")]
 <<<<<<< HEAD
-<<<<<<< HEAD
         [EnableCors("MyPolicy")]
-=======
->>>>>>> parent of da49594b... Merge pull request #13 from wo-shi-lao-luo/kyle-branch
 =======
 >>>>>>> parent of da49594b... Merge pull request #13 from wo-shi-lao-luo/kyle-branch
         public List<Product> GetProducts()
@@ -49,10 +43,7 @@ namespace Shopping_Web.Controllers
 
         [HttpGet("api/products/{id}")]
 <<<<<<< HEAD
-<<<<<<< HEAD
         [EnableCors("MyPolicy")]
-=======
->>>>>>> parent of da49594b... Merge pull request #13 from wo-shi-lao-luo/kyle-branch
 =======
 >>>>>>> parent of da49594b... Merge pull request #13 from wo-shi-lao-luo/kyle-branch
         public Product GetProductById(int id)

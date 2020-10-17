@@ -35,7 +35,6 @@ namespace Shopping_Web
             services.AddTransient<JsonFileProductService>();
             services.AddTransient<ProductService>();
 <<<<<<< HEAD
-<<<<<<< HEAD
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
                 builder.AllowAnyOrigin()
@@ -43,8 +42,6 @@ namespace Shopping_Web
                        .AllowAnyHeader();
             }));
 
-=======
->>>>>>> parent of da49594b... Merge pull request #13 from wo-shi-lao-luo/kyle-branch
 =======
 >>>>>>> parent of da49594b... Merge pull request #13 from wo-shi-lao-luo/kyle-branch
         }
