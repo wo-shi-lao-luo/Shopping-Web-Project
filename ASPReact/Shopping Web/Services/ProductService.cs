@@ -4,29 +4,38 @@ using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Threading.Tasks;
 using ASP.net_version.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Shopping_Web.DbContexts;
 
 namespace Shopping_Web.Services
 {
     public class ProductService
     {
-        ShoppingContext db = new ShoppingContext();
+        ShoppingContext _db;
 
-        public List<Product> GetProducts()
+        public ProductService(ShoppingContext db)
         {
-            List<Product> Products = new List<Product>();
-            //var query = from product in db.Products select product;
-            Products = db.Products.ToList();
-
-            return Products;
+            _db = db;
         }
 
-        public Product GetProductById(int id)
+        public async Task<ActionResult<IEnumerable<ProductModel>>> GetProducts()
         {
-            Product product = new Product();
+            //List<ProductModel> Products = new List<ProductModel>();
+            //Products = _db.Products.ToList();
+
+            //return Products;
+            return await _db.Products
+                .Select(x => ProductDTO(x))
+                .ToListAsync();
+        }
+
+        public ProductModel GetProductById(int id)
+        {
+            ProductModel product = new ProductModel();
             try
             {
-                product = db.Products.Single(p => p.Id == id);
+                product = _db.Products.Single(p => p.Id == id);
             }
             catch (Exception e)
             {
@@ -34,5 +43,19 @@ namespace Shopping_Web.Services
             }
             return product;
         }
+
+        private bool ProductExists(long id) =>_db.Products.Any(e => e.Id == id);
+
+        private static ProductModel ProductDTO (ProductModel product) =>
+            new ProductModel
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Price = product.Price,
+                Title = product.Title,
+                Image = product.Image,
+                URL = product.URL,
+                Description = product.Description
+            };
     }
 }
