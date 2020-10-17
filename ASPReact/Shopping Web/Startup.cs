@@ -33,7 +33,15 @@ namespace Shopping_Web
             {
                 configuration.RootPath = "ClientApp/build";
             });
-            services.AddDbContext<ShoppingContext>();
+            services.AddTransient<JsonFileProductService>();
+            services.AddTransient<ProductService>();
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,7 +63,7 @@ namespace Shopping_Web
             app.UseSpaStaticFiles();
 
             app.UseRouting();
-
+            app.UseCors("MyPolicy");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -73,6 +81,9 @@ namespace Shopping_Web
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
+
+            
+
         }
     }
 }
