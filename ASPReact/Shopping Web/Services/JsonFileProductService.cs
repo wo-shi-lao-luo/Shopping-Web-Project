@@ -23,12 +23,12 @@ namespace ASP.net_version.Services
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "data.json"); }
         }
 
-        public IEnumerable<ProductModel> GetProducts()
+        public IEnumerable<Product> GetProducts()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {
 
-                return JsonSerializer.Deserialize<ProductModel[]>(jsonFileReader.ReadToEnd(),
+                return JsonSerializer.Deserialize<Product[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
