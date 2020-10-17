@@ -27,7 +27,7 @@ namespace Shopping_Web.Controllers
         }
 
         [HttpGet("api/products")]
-        [EnableCors("AllowOrigin")]
+        [EnableCors("MyPolicy")]
         public List<Product> GetProducts()
         {
             Products = ProductService.GetProducts();
@@ -36,7 +36,7 @@ namespace Shopping_Web.Controllers
 
 
         [HttpGet("api/products/{id}")]
-        [EnableCors("AllowOrigin")]
+        [EnableCors("MyPolicy")]
         public Product GetProductById(int id)
         {
             var product = ProductService.GetProductById(id);

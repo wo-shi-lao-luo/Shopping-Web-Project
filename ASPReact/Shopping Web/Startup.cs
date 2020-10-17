@@ -34,10 +34,12 @@ namespace Shopping_Web
             });
             services.AddTransient<JsonFileProductService>();
             services.AddTransient<ProductService>();
-            services.AddCors(c =>
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
-                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
-            });
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
 
         }
 
@@ -60,7 +62,7 @@ namespace Shopping_Web
             app.UseSpaStaticFiles();
 
             app.UseRouting();
-
+            app.UseCors("MyPolicy");
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -79,7 +81,7 @@ namespace Shopping_Web
                 }
             });
 
-            app.UseCors(options => options.WithOrigins("https://localhost:3000"));
+            
 
         }
     }
