@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ASP.net_version.Models
 {
-    public class ProductModel
+    public class Product
     {
         //[JsonPropertyName("productId")]
         public int Id { get; set; }
