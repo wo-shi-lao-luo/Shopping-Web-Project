@@ -5,6 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using ASP.net_version.Models;
 using ASP.net_version.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Shopping_Web.Services;
@@ -26,6 +27,7 @@ namespace Shopping_Web.Controllers
         }
 
         [HttpGet("api/products")]
+        [EnableCors("AllowOrigin")]
         public List<Product> GetProducts()
         {
             Products = ProductService.GetProducts();
@@ -34,6 +36,7 @@ namespace Shopping_Web.Controllers
 
 
         [HttpGet("api/products/{id}")]
+        [EnableCors("AllowOrigin")]
         public Product GetProductById(int id)
         {
             var product = ProductService.GetProductById(id);
