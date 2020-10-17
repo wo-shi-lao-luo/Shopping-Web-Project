@@ -33,8 +33,8 @@ namespace Shopping_Web
             {
                 configuration.RootPath = "ClientApp/build";
             });
-            services.AddTransient<JsonFileProductService>();
-            services.AddTransient<ProductService>();
+            
+            services.AddDbContext<ShoppingContext>();
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
                 builder.AllowAnyOrigin()
