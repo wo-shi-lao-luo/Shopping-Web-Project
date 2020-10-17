@@ -34,6 +34,11 @@ namespace Shopping_Web
             });
             services.AddTransient<JsonFileProductService>();
             services.AddTransient<ProductService>();
+            services.AddCors(c =>
+            {
+                c.AddPolicy("AllowOrigin", options => options.AllowAnyOrigin());
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -73,6 +78,9 @@ namespace Shopping_Web
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
+
+            app.UseCors(options => options.WithOrigins("https://localhost:3000"));
+
         }
     }
 }

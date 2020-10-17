@@ -10,7 +10,7 @@ export default () => (
     <React.Fragment>
         <Switch>
             <Route exact path="/" component={HeroImage} />
-            <Route path="/productlist" component={ProductList} />
+            <Route path="/products" component={ProductList} />
             <Route path="/details" component={DetailPage} />
             <Route path="/cart" component={Cart} />
         </Switch>

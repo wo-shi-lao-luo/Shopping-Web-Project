@@ -9,7 +9,7 @@ import Navbar from '../../components/Navbar/Navbar';
 import Button from '../../components/Button/Button';
 import Card from '../../components/Card/Card';
 
-function productList () {
+function productList() {
     //state = { products: data};
    //  state = { products: [] }
     //const [products, setProducts] = useState("prodcuts");
