@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Shopping_Web.DbContexts;
 using Shopping_Web.Services;
+using System.Data.SqlClient;
 
 namespace Shopping_Web
 {
@@ -33,8 +34,12 @@ namespace Shopping_Web
             {
                 configuration.RootPath = "ClientApp/build";
             });
-            
-            services.AddDbContext<ShoppingContext>();
+
+            services.AddDbContext<ShoppingContext>(options
+                => options.UseSqlServer(Configuration.GetConnectionString("Shopping_web_db")));
+            //services.AddDbContext<ShoppingContext>(options
+            //    => options.UseSqlServer("Server=(LocalDB)\\MSSQLLocalDB;Database=Shopping_Web;Trusted_connection=true;"));;
+
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
                 builder.AllowAnyOrigin()
@@ -62,8 +67,13 @@ namespace Shopping_Web
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
+
             app.UseRouting();
             app.UseCors("MyPolicy");
+
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
