@@ -41,7 +41,7 @@ namespace Shopping_Web.Controllers
             return CreatedAtAction(nameof(GetUserById), new { id = userInfo.Id}, userInfo);
         }
 
-        [HttpGet("api/user/{id}")]
+        [HttpGet("api/user/id/{id}")]
         public async Task<ActionResult<UserModel>> GetUserById(int id)
         {
             var userInfo = await _context.User.FindAsync(id);
@@ -51,6 +51,15 @@ namespace Shopping_Web.Controllers
             return userInfo;
         }
 
+        [HttpGet("api/user/email/{email}")]
+        public async Task<ActionResult<UserModel>> GetUserByEmail(string email)
+        {
+            var userInfo = await _context.User.FindAsync(email);
+
+            if (userInfo == null) return NotFound();
+
+            return userInfo;
+        }
 
     }
 }

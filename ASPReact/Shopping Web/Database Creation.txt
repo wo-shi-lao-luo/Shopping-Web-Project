@@ -1,3 +1,31 @@
+
+
+----------------------------------------------
+SQL Server
+
+CREATE TABLE "Products" (
+	"Id"	INTEGER NOT NULL UNIQUE IDENTITY,
+	"Name"	VARCHAR(256) NOT NULL,
+	"Price"	NUMERIC NOT NULL,
+	"Title"	VARCHAR(256),
+	"Image"	VARCHAR(256),
+	"URL"	VARCHAR(256),
+	"Description" TEXT,
+	PRIMARY KEY("Id")
+)
+
+CREATE TABLE "User" (
+	"ID"	INTEGER NOT NULL UNIQUE IDENTITY,
+	"Name"	VARCHAR(50) NOT NULL,
+	"Email"	VARCHAR(256) NOT NULL UNIQUE,
+	"Password"	VARCHAR(20) NOT NULL,
+	PRIMARY KEY("ID")
+);
+
+
+---------------------------------------------
+SQLite
+
 CREATE TABLE "Products" (
 	"Id"	INTEGER NOT NULL UNIQUE,
 	"Name"	TEXT NOT NULL,

@@ -6,13 +6,15 @@ using System.Security.Cryptography.X509Certificates;
 using System.Security.Cryptography.Xml;
 using System.Threading.Tasks;
 using ASP.net_version.Models;
-using ASP.net_version.Services;
+
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Shopping_Web.DbContexts;
 using Shopping_Web.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Shopping_Web.Controllers
 {
@@ -31,6 +33,7 @@ namespace Shopping_Web.Controllers
         }
 
         [HttpGet("api/products")]
+        [EnableCors("MyPolicy")]
         public async Task<ActionResult<IEnumerable<ProductModel>>> GetProducts()
         {
             var Products = from product in _context.Products
@@ -40,6 +43,7 @@ namespace Shopping_Web.Controllers
         }
 
         [HttpGet("api/products/{id}")]
+        [EnableCors("MyPolicy")]
         public async Task<ActionResult<ProductModel>> GetTodoItem(int id)
         {
             var product = await _context.Products.FindAsync(id);
@@ -49,15 +53,16 @@ namespace Shopping_Web.Controllers
                 return NotFound();
             }
 
-            return ProductDTO(product);
+            return product;
         }
 
-
+        //[Authorize]
         [HttpPost("api/products/add")]
+        [EnableCors("MyPolicy")]
         public async Task<ActionResult<ProductModel>> CreateTodoItem(ProductModel productToAdd)
         {
             _context.Products.Add(productToAdd);
-            await _context.SaveChangesAsync();  
+            await _context.SaveChangesAsync();
 
             return CreatedAtAction(
                 nameof(GetTodoItem),
@@ -67,16 +72,16 @@ namespace Shopping_Web.Controllers
 
         private bool ProductExists(int id) => _context.Products.Any(e => e.Id == id);
 
-        private static ProductModel ProductDTO(ProductModel product) =>
-            new ProductModel
-            {
-                Id = product.Id,
-                Name = product.Name,
-                Price = product.Price,
-                Title = product.Title,
-                Image = product.Image,
-                URL = product.URL,
-                Description = product.Description
-            };
+        //private static ProductModel ProductDTO(ProductModel product) =>
+        //    new ProductModel
+        //    {
+        //        Id = product.Id,
+        //        Name = product.Name,
+        //        Price = product.Price,
+        //        Title = product.Title,
+        //        Image = product.Image,
+        //        URL = product.URL,
+        //        Description = product.Description
+        //    };
     }
 }

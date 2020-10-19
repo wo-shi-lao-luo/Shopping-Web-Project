@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using ASP.net_version.Models;
 using Microsoft.EntityFrameworkCore;
 using Shopping_Web.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Shopping_Web.DbContexts
 {
@@ -17,7 +20,7 @@ namespace Shopping_Web.DbContexts
         public DbSet<ProductModel> Products { get; set; }
         public DbSet<UserModel> User { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder options)
-            => options.UseSqlite("Data Source=database/shopping_web.db");
+        //protected override void OnConfiguring(DbContextOptionsBuilder options)
+        //    => options.UseSqlite("Data Source=database/shopping_web.db");
     }
 }

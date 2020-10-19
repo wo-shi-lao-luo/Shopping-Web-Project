@@ -9,7 +9,7 @@ const navigationItems = () => (
     <div className={classes.navList}>
         <ul className={classes.nav}>
             <NavigationItem link="/">Home</NavigationItem>
-            <NavigationItem link="/productlist">Order</NavigationItem>
+            <NavigationItem link="/products">Order</NavigationItem>
             <NavigationItem link="/contact">Contact</NavigationItem>
         </ul>
 
