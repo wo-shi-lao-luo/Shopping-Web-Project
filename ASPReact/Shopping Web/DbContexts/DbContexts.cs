@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Shopping_Web.DbContexts
 {
-    public class ShoppingContext : DbContext
+    public class ShoppingContext : IdentityDbContext<IdentityUser>
     {
         public ShoppingContext(DbContextOptions<ShoppingContext> options) : base(options)
         {
