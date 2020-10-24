@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Shopping_Web.DbContexts;
-using Shopping_Web.Models;
 using Shopping_Web.Services.UserService;
 
 namespace Shopping_Web.Controllers
@@ -38,7 +34,7 @@ namespace Shopping_Web.Controllers
             _context.User.Add(userInfo);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetUserById), new { id = userInfo.Id}, userInfo);
+            return CreatedAtAction(nameof(GetUserById), new { id = userInfo.Id }, userInfo);
         }
 
         [HttpGet("api/user/id/{id}")]

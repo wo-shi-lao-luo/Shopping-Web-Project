@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-using Shopping_Web.Controllers;
-using Shopping_Web.DbContexts;
-using Shopping_Web.Models;
+﻿using Shopping_Web.Controllers;
 
 namespace Shopping_Web.Services.UserService
 {
@@ -15,7 +7,7 @@ namespace Shopping_Web.Services.UserService
         private UserModel user = new UserModel();
         private UserController _controller;
 
-        public UserRegistration (UserController controller)
+        public UserRegistration(UserController controller)
         {
             _controller = controller;
         }

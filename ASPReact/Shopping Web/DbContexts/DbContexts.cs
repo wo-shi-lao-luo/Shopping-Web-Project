@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using ASP.net_version.Models;
-using Microsoft.EntityFrameworkCore;
-using Shopping_Web.Models;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Options;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Shopping_Web.Models.ProductModel;
+using Shopping_Web.Models.UserModel;
 
 namespace Shopping_Web.DbContexts
 {
@@ -15,8 +8,8 @@ namespace Shopping_Web.DbContexts
     {
         public ShoppingContext(DbContextOptions<ShoppingContext> options) : base(options)
         {
-
         }
+
         public DbSet<ProductModel> Products { get; set; }
         public DbSet<UserModel> User { get; set; }
 
