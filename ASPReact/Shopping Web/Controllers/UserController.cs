@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Shopping_Web.DbContexts;
+using Shopping_Web.Models.UserModel;
 using Shopping_Web.Services.UserService;
 
 namespace Shopping_Web.Controllers

@@ -9,7 +9,7 @@
         public string Name { get; set; }
 
         //[JsonPropertyName("productPrice")]
-        public float Price { get; set; }
+        public decimal Price { get; set; }
 
         //[JsonPropertyName("productTitle")]
         public string Title { get; set; }

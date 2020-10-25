@@ -1,19 +1,18 @@
 ﻿//using System;
 //using System.Collections.Generic;
 //using System.Linq;
-//using System.Reflection.Metadata.Ecma335;
 //using System.Threading.Tasks;
-//using ASP.net_version.Models;
 //using Microsoft.AspNetCore.Mvc;
 //using Microsoft.EntityFrameworkCore;
 //using Shopping_Web.DbContexts;
+//using Shopping_Web.Models.ProductModel;
 
 //namespace Shopping_Web.Services
 //{
 //    public class ProductService
 //    {
-//        ShoppingContext _db;
-
+//        private readonly ShoppingContext _db;
+//        public ProductModel Products = new ProductModel();
 //        public ProductService(ShoppingContext db)
 //        {
 //            _db = db;
@@ -26,13 +25,13 @@
 
 //            //return Products;
 //            return await _db.Products
-//                .Select(x => ProductDTO(x))
+//                .Select(product => new ProductModel())
 //                .ToListAsync();
 //        }
 
 //        public ProductModel GetProductById(int id)
 //        {
-//            ProductModel product = new ProductModel();
+//            var product = new ProductModel();
 //            try
 //            {
 //                product = _db.Products.Single(p => p.Id == id);
@@ -41,21 +40,27 @@
 //            {
 //                product = null;
 //            }
+
 //            return product;
 //        }
 
-//        private bool ProductExists(long id) =>_db.Products.Any(e => e.Id == id);
+//        private bool ProductExists(long id)
+//        {
+//            return _db.Products.Any(e => e.Id == id);
+//        }
 
-//        private static ProductModel ProductDTO (ProductModel product) =>
-//            new ProductModel
-//            {
-//                Id = product.Id,
-//                Name = product.Name,
-//                Price = product.Price,
-//                Title = product.Title,
-//                Image = product.Image,
-//                URL = product.URL,
-//                Description = product.Description
-//            };
+//        //private static ProductModel ProductDTO(ProductModel product)
+//        //{
+//        //    return new ProductModel
+//        //    {
+//        //        Id = product.Id,
+//        //        Name = product.Name,
+//        //        Price = product.Price,
+//        //        Title = product.Title,
+//        //        Image = product.Image,
+//        //        Url = product.Url,
+//        //        Description = product.Description
+//        //    };
+//        //}
 //    }
 //}

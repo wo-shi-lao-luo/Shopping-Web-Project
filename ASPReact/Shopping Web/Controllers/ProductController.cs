@@ -1,21 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ASP.net_version.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Shopping_Web.DbContexts;
+using Shopping_Web.Models.ProductModel;
 
 namespace Shopping_Web.Controllers
 {
     public class ProductController : Controller
     {
         private readonly ILogger<ProductController> _logger;
-        public ProductModel Product = new ProductModel();
         public ShoppingContext _context;
-
+        public ProductModel Product = new ProductModel();
 
 
         public ProductController(ILogger<ProductController> logger, ShoppingContext context)
@@ -28,10 +28,10 @@ namespace Shopping_Web.Controllers
         [EnableCors("MyPolicy")]
         public async Task<ActionResult<IEnumerable<ProductModel>>> GetProducts()
         {
-            var Products = from product in _context.Products
-                           select product;
-
-            return await Products.ToListAsync();
+            var products = from product in _context.Products
+                select product;
+            Console.WriteLine(products);
+            return await products.ToListAsync();
         }
 
         [HttpGet("api/products/{id}")]
@@ -40,10 +40,7 @@ namespace Shopping_Web.Controllers
         {
             var product = await _context.Products.FindAsync(id);
 
-            if (product == null)
-            {
-                return NotFound();
-            }
+            if (product == null) return NotFound();
 
             return product;
         }
@@ -53,16 +50,19 @@ namespace Shopping_Web.Controllers
         [EnableCors("MyPolicy")]
         public async Task<ActionResult<ProductModel>> CreateTodoItem(ProductModel productToAdd)
         {
-            _context.Products.Add(productToAdd);
-            await _context.SaveChangesAsync();
+            await _context.Products.AddAsync(productToAdd);
+            //await _context.SaveChangesAsync();
 
             return CreatedAtAction(
                 nameof(GetTodoItem),
-                new { name = productToAdd.Name },
+                new {name = productToAdd.Name},
                 productToAdd);
         }
 
-        private bool ProductExists(int id) => _context.Products.Any(e => e.Id == id);
+        private bool ProductExists(int id)
+        {
+            return _context.Products.Any(e => e.Id == id);
+        }
 
         //private static ProductModel ProductDTO(ProductModel product) =>
         //    new ProductModel

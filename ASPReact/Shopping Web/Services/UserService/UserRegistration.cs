@@ -1,4 +1,5 @@
 ﻿using Shopping_Web.Controllers;
+using Shopping_Web.Models.UserModel;
 
 namespace Shopping_Web.Services.UserService
 {
