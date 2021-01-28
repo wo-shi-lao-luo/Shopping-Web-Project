@@ -11,6 +11,7 @@ using Shopping_Web.Models.ProductModel;
 
 namespace Shopping_Web.Controllers
 {
+    [Route ("api/products")]
     public class ProductController : Controller
     {
         private readonly ILogger<ProductController> _logger;
@@ -24,19 +25,18 @@ namespace Shopping_Web.Controllers
             _context = context;
         }
 
-        [HttpGet("api/products")]
+        [HttpGet]
         [EnableCors("MyPolicy")]
         public async Task<ActionResult<IEnumerable<ProductModel>>> GetProducts()
         {
             var products = from product in _context.Products
                 select product;
-            Console.WriteLine(products);
             return await products.ToListAsync();
         }
 
         [HttpGet("api/products/{id}")]
         [EnableCors("MyPolicy")]
-        public async Task<ActionResult<ProductModel>> GetTodoItem(int id)
+        public async Task<ActionResult<ProductModel>> GetProductById(int id)
         {
             var product = await _context.Products.FindAsync(id);
 
@@ -51,11 +51,11 @@ namespace Shopping_Web.Controllers
         public async Task<ActionResult<ProductModel>> CreateTodoItem(ProductModel productToAdd)
         {
             await _context.Products.AddAsync(productToAdd);
-            //await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync();
 
             return CreatedAtAction(
-                nameof(GetTodoItem),
-                new {name = productToAdd.Name},
+                nameof(GetProductById),
+                new {Id = productToAdd.Id},
                 productToAdd);
         }
 

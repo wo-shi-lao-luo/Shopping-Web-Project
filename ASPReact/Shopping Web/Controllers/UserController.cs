@@ -7,6 +7,7 @@ using Shopping_Web.Services.UserService;
 
 namespace Shopping_Web.Controllers
 {
+    [Route ("api/user")]
     public class UserController : Controller
     {
         private readonly ILogger<ProductController> _logger;
@@ -22,8 +23,8 @@ namespace Shopping_Web.Controllers
             _registration = registration;
         }
 
-
-        [HttpPost("api/user/register")]
+        [HttpPost]
+        [Route ("register")]
         public async Task<ActionResult<UserModel>> PostUserInfo(UserModel userInfo)
         {
             userInfo = _registration.RegisterUser(userInfo.Name, userInfo.Email, userInfo.Password);
@@ -38,7 +39,8 @@ namespace Shopping_Web.Controllers
             return CreatedAtAction(nameof(GetUserById), new { id = userInfo.Id }, userInfo);
         }
 
-        [HttpGet("api/user/id/{id}")]
+        [HttpGet]
+        [Route ("id /{id}")]
         public async Task<ActionResult<UserModel>> GetUserById(int id)
         {
             var userInfo = await _context.User.FindAsync(id);
